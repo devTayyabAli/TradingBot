@@ -6,8 +6,17 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, Any, Optional
-import winsound  # Windows sound notifications
 import threading
+
+# Platform-specific imports
+try:
+    import winsound  # Windows sound notifications
+    SOUND_AVAILABLE = True
+except ImportError:
+    try:
+        SOUND_AVAILABLE = True
+    except ImportError:
+        SOUND_AVAILABLE = False
 
 class TradeNotifier:
     def __init__(self, notifications_file: str = "trade_notifications.json"):
@@ -94,36 +103,35 @@ class TradeNotifier:
         return notification
     
     def play_alert_sound(self):
-        """Play alert sound on Windows"""
-        def play():
-            try:
-                # Play system alert sound 3 times
-                for _ in range(3):
-                    winsound.MessageBeep(winsound.MB_ICONEXCLAMATION)
-                    threading.Event().wait(0.5)
-            except:
-                pass  # Fail silently if sound doesn't work
-        
-        thread = threading.Thread(target=play)
-        thread.daemon = True
-        thread.start()
+        """Play alert sound on any platform"""
+        if not SOUND_AVAILABLE:
+            return
+            
+        try:
+            if os.name == 'nt':  # Windows
+                import winsound
+                winsound.Beep(1000, 500)  # Frequency, duration
+            else:  # Linux/Mac
+                os.system('echo -e "\a"')  # Terminal bell
+        except Exception as e:
+            print(f"[TradeNotifier] Sound failed: {e}")
     
     def print_alert(self, notification: Dict[str, Any]):
         """Print formatted alert to console"""
         print("\n" + "="*60)
-        print("🚨 HIGH-QUALITY TRADE ALERT 🚨")
+        print("HIGH-QUALITY TRADE ALERT")
         print("="*60)
-        print(f"📊 Asset: {notification['asset']} ({notification['timeframe']})")
-        print(f"📈 Signal: {notification['signal']} - {notification['strength']}")
-        print(f"🎯 Confidence: {notification['confidence']}%")
-        print(f"💰 Price: {notification['price']}")
-        print(f"🛑 Stop Loss: {notification['stop_loss']}")
-        print(f"🎯 Take Profit: {notification['take_profit']}")
-        print(f"⚖️  Risk/Reward: 1:{notification['risk_reward']}")
-        print(f"📋 Reason: {notification['reason']}")
-        print(f"📊 Indicators: {notification['indicators_agreeing']}/{notification['total_indicators']} agree")
+        print(f"Asset: {notification['asset']} ({notification['timeframe']})")
+        print(f"Signal: {notification['signal']} - {notification['strength']}")
+        print(f"Confidence: {notification['confidence']}%")
+        print(f"Price: {notification['price']}")
+        print(f"Stop Loss: {notification['stop_loss']}")
+        print(f"Take Profit: {notification['take_profit']}")
+        print(f"Risk/Reward: 1:{notification['risk_reward']}")
+        print(f"Reason: {notification['reason']}")
+        print(f"Indicators: {notification['indicators_agreeing']}/{notification['total_indicators']} agree")
         print("="*60)
-        print("⚠️  Check your trading platform and enter trade if conditions match")
+        print("Check your trading platform and enter trade if conditions match")
         print("="*60 + "\n")
     
     def get_unread_notifications(self) -> list:
