@@ -1,0 +1,1388 @@
+[
+    {
+        "timestamp": "2026-03-15T23:40:00.325427",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315234000326077",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T23:34:33.158675",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315233433159526",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T23:22:47.394547",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315232247395549",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T23:15:35.977303",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315231535978190",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:54:08.706727",
+        "asset": "USDCHF_otc",
+        "signal": "NEUTRAL",
+        "price": 0.7911499738693237,
+        "confidence": 54.2,
+        "id": "20260315225408707275",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:53:43.516581",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315225343517133",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:46:17.247911",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315224617248530",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:29:08.044024",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 54.2,
+        "id": "20260315222908044566",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:29:03.150652",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 54.2,
+        "id": "20260315222903151742",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:28:59.062243",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 54.2,
+        "id": "20260315222859062851",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:28:54.348325",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 54.2,
+        "id": "20260315222854348874",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:28:48.511672",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315222848512260",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:23:04.333393",
+        "asset": "BTCUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 42010.21853749199,
+        "confidence": 52.1,
+        "id": "20260315222304335607",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:22:42.781442",
+        "asset": "XAUUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2870346910550619,
+        "confidence": 50.0,
+        "id": "20260315222242782632",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:22:14.838890",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 52.1,
+        "id": "20260315222214839418",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:20:28.992422",
+        "asset": "EURGBP_otc",
+        "signal": "NEUTRAL",
+        "price": 0.8632000088691711,
+        "confidence": 52.1,
+        "id": "20260315222028993406",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T22:09:01.360730",
+        "asset": "EURGBP_otc",
+        "signal": "NEUTRAL",
+        "price": 0.8632000088691711,
+        "confidence": 52.1,
+        "id": "20260315220901361268",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:58:35.574868",
+        "asset": "EURGBP_otc",
+        "signal": "NEUTRAL",
+        "price": 0.8632000088691711,
+        "confidence": 52.1,
+        "id": "20260315215835575443",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:58:24.149108",
+        "asset": "NZDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 0.5776006579399109,
+        "confidence": 52.1,
+        "id": "20260315215824149690",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:58:16.020200",
+        "asset": "USDCHF_otc",
+        "signal": "NEUTRAL",
+        "price": 0.7911499738693237,
+        "confidence": 54.2,
+        "id": "20260315215816020725",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:58:09.466595",
+        "asset": "USDCAD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3717999458312988,
+        "confidence": 52.1,
+        "id": "20260315215809467133",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:58:01.199401",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 0.6983240246772766,
+        "confidence": 52.1,
+        "id": "20260315215801199911",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:57:55.289285",
+        "asset": "USDJPY_otc",
+        "signal": "NEUTRAL",
+        "price": 159.72000122070312,
+        "confidence": 52.1,
+        "id": "20260315215755289820",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:57:49.137082",
+        "asset": "GBPUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.3223490715026855,
+        "confidence": 54.2,
+        "id": "20260315215749137597",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:57:35.720392",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315215735720958",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:50:31.016950",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315215031017487",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-15T21:45:53.047120",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1423349380493164,
+        "confidence": 52.1,
+        "id": "20260315214553047626",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:08:23.055932",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1440337896347046,
+        "confidence": 52.1,
+        "id": "20260313220823056679",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:08:02.950877",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1440337896347046,
+        "confidence": 52.1,
+        "id": "20260313220802961198",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:52.958212",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220752969131",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:43.857692",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220743858264",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:35.285298",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220735297942",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:26.947063",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220726960360",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:20.909983",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220720934351",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T22:07:08.814922",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 52.1,
+        "id": "20260313220708815767",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:56:21.171567",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144819736480713,
+        "confidence": 54.2,
+        "id": "20260313215621187097",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:55:56.550850",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1449507474899292,
+        "confidence": 52.1,
+        "id": "20260313215556551389",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:49:35.294800",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 54.2,
+        "id": "20260313214935295336",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:46:34.873284",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 58.3,
+        "id": "20260313214634874115",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:45:30.381777",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1440337896347046,
+        "confidence": 56.2,
+        "id": "20260313214530382311",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:44:27.083096",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144164800643921,
+        "confidence": 54.2,
+        "id": "20260313214427083619",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:22:51.596075",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313212251605837",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:22:41.971621",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313212241972101",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:21:57.920360",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313212157920871",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:21:22.896515",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313212122897094",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:20:24.799880",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144426703453064,
+        "confidence": 52.1,
+        "id": "20260313212024810088",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:20:11.010735",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144426703453064,
+        "confidence": 52.1,
+        "id": "20260313212011019855",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:19:52.962898",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313211952974651",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:19:38.931439",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313211938931936",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:19:31.492960",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313211931501265",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:19:02.219050",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 56.2,
+        "id": "20260313211902228387",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:18:50.015183",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211850029901",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:18:42.000029",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211842000606",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:18:22.941883",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211822953767",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:18:09.295404",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211809323204",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:17:38.806201",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211738806901",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:17:12.572065",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211712580480",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:17:05.416640",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1442956924438477,
+        "confidence": 54.2,
+        "id": "20260313211705426238",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:16:50.392863",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 56.2,
+        "id": "20260313211650409840",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:16:37.600724",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 56.2,
+        "id": "20260313211637601379",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:16:20.700786",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 56.2,
+        "id": "20260313211620701231",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:14:32.263481",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144426703453064,
+        "confidence": 52.1,
+        "id": "20260313211432272646",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:14:20.525344",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144426703453064,
+        "confidence": 52.1,
+        "id": "20260313211420540355",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:14:08.697665",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144426703453064,
+        "confidence": 52.1,
+        "id": "20260313211408698102",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:09:36.970380",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1449507474899292,
+        "confidence": 52.1,
+        "id": "20260313210936970869",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:06:54.083045",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1449507474899292,
+        "confidence": 50.0,
+        "id": "20260313210654083512",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:04:38.548257",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.145081877708435,
+        "confidence": 52.1,
+        "id": "20260313210438548709",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:01:33.902194",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 52.1,
+        "id": "20260313210133902647",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:01:11.461055",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.1445575952529907,
+        "confidence": 52.1,
+        "id": "20260313210111461739",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:00:48.054854",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 52.1,
+        "id": "20260313210048055544",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T21:00:07.395667",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 52.1,
+        "id": "20260313210007396391",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T20:51:07.126930",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.144688606262207,
+        "confidence": 52.1,
+        "id": "20260313205107127368",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T20:41:11.627762",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.052587121581431,
+        "confidence": 54.2,
+        "id": "20260313204111628184",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:29:27.440033",
+        "asset": "EURUSD",
+        "signal": "DOWN",
+        "price": 1.116900255104666,
+        "confidence": 57.4,
+        "id": "20260313192927440454",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:38.039289",
+        "asset": "EURJPY_otc",
+        "signal": "DOWN",
+        "price": 153.90597295114594,
+        "confidence": 72.1,
+        "id": "20260313191938039938",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:30.952039",
+        "asset": "USDCAD_otc",
+        "signal": "UP",
+        "price": 1.2128566027678458,
+        "confidence": 61.0,
+        "id": "20260313191930952783",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:27.970252",
+        "asset": "AUDUSD_otc",
+        "signal": "DOWN",
+        "price": 1.2125101249218526,
+        "confidence": 88.0,
+        "id": "20260313191927970857",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:23.803438",
+        "asset": "USDJPY_otc",
+        "signal": "DOWN",
+        "price": 145.0379863398506,
+        "confidence": 83.1,
+        "id": "20260313191923804098",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:20.843248",
+        "asset": "GBPUSD_otc",
+        "signal": "DOWN",
+        "price": 1.2276084193701673,
+        "confidence": 66.5,
+        "id": "20260313191920843843",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:17.888257",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191917888697",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:14.956835",
+        "asset": "AUDUSD_otc",
+        "signal": "DOWN",
+        "price": 1.2125101249218526,
+        "confidence": 88.0,
+        "id": "20260313191914957569",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:10.875657",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191910876099",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:10.641846",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191910642257",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:19:07.930226",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191907930727",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:57.106829",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191857107363",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.942656",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856943035",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.800898",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856801337",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.642276",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856642857",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.439817",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856440368",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.294637",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856295048",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:56.109285",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191856109706",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.950695",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855951243",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.805155",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855805676",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.640170",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855640711",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.491248",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855491670",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.339402",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855339827",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.192088",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855192561",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:55.039432",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191855039952",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:54.904761",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191854905256",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:54.736314",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191854736840",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:54.402330",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191854402814",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:18:53.496366",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191853496934",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:17:49.807926",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191749808285",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:17:31.603893",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191731613671",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:17:19.281364",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.117523720959194,
+        "confidence": 56.1,
+        "id": "20260313191719281720",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:14:36.993338",
+        "asset": "EURUSD",
+        "signal": "DOWN",
+        "price": 1.0527466271064552,
+        "confidence": 62.2,
+        "id": "20260313191436993719",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:10:46.826493",
+        "asset": "EURJPY_otc",
+        "signal": "UP",
+        "price": 153.96721757538916,
+        "confidence": 94.1,
+        "id": "20260313191046827567",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:09:33.157558",
+        "asset": "EURJPY_otc",
+        "signal": "UP",
+        "price": 153.96721757538916,
+        "confidence": 94.1,
+        "id": "20260313190933158231",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:08:24.342023",
+        "asset": "EURJPY_otc",
+        "signal": "UP",
+        "price": 153.96721757538916,
+        "confidence": 94.1,
+        "id": "20260313190824342781",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:07:10.515063",
+        "asset": "EURJPY_otc",
+        "signal": "UP",
+        "price": 153.96721757538916,
+        "confidence": 94.1,
+        "id": "20260313190710515484",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:06:01.697750",
+        "asset": "EURJPY_otc",
+        "signal": "UP",
+        "price": 153.96721757538916,
+        "confidence": 94.1,
+        "id": "20260313190601698225",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:03:34.895744",
+        "asset": "EURUSD_otc",
+        "signal": "DOWN",
+        "price": 1.1169690308594393,
+        "confidence": 84.3,
+        "id": "20260313190334896253",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:01:46.685279",
+        "asset": "EURUSD_otc",
+        "signal": "UP",
+        "price": 1.1174589355835898,
+        "confidence": 84.3,
+        "id": "20260313190146686172",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:01:41.794247",
+        "asset": "EURUSD_otc",
+        "signal": "UP",
+        "price": 1.1174589355835898,
+        "confidence": 84.3,
+        "id": "20260313190141794555",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:00:04.664648",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0528815748710674,
+        "confidence": 54.9,
+        "id": "20260313190004664987",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:00:03.948638",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0528815748710674,
+        "confidence": 54.9,
+        "id": "20260313190003949110",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T19:00:02.655713",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0528815748710674,
+        "confidence": 54.9,
+        "id": "20260313190002656232",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:58:49.774912",
+        "asset": "EURUSD",
+        "signal": "UP",
+        "price": 1.0529562204601421,
+        "confidence": 64.7,
+        "id": "20260313185849775223",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:57:26.223143",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.0714071010045216,
+        "confidence": 52.5,
+        "id": "20260313185726223479",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:56:29.104140",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.075913973801032,
+        "confidence": 67.2,
+        "id": "20260313185629116153",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:56:16.422147",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.075913973801032,
+        "confidence": 67.2,
+        "id": "20260313185616422447",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:34.442639",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185334443144",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:34.224842",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185334225215",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:34.043041",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185334043417",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:33.710768",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185333711550",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:32.998416",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185332998725",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T18:53:06.090749",
+        "asset": "AUDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2488357550884654,
+        "confidence": 57.4,
+        "id": "20260313185306091166",
+        "outcome": "loss"
+    },
+    {
+        "timestamp": "2026-03-13T18:53:02.759916",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.098455267160263,
+        "confidence": 54.9,
+        "id": "20260313185302760274",
+        "outcome": "win"
+    },
+    {
+        "timestamp": "2026-03-13T18:53:00.537899",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0876747613113404,
+        "confidence": 57.4,
+        "id": "20260313185300538383",
+        "outcome": "loss"
+    },
+    {
+        "timestamp": "2026-03-13T18:52:59.074018",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0876747613113404,
+        "confidence": 57.4,
+        "id": "20260313185259074329",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:40:16.635708",
+        "asset": "NZDUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.2303068138332054,
+        "confidence": 67.2,
+        "id": "20260313174016636018",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:40:11.760545",
+        "asset": "USDJPY_otc",
+        "signal": "NEUTRAL",
+        "price": 146.21780230553432,
+        "confidence": 67.2,
+        "id": "20260313174011761026",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:40:08.132080",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0653068138332054,
+        "confidence": 67.2,
+        "id": "20260313174008132462",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:40:05.246591",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0719919307164107,
+        "confidence": 62.2,
+        "id": "20260313174005247101",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:40:03.734207",
+        "asset": "EURUSD_otc",
+        "signal": "NEUTRAL",
+        "price": 1.0719919307164107,
+        "confidence": 62.2,
+        "id": "20260313174003734579",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:19:15.921467",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.0719919307164107,
+        "confidence": 62.2,
+        "id": "20260313171915921791",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:18:51.455350",
+        "asset": "USDBRL",
+        "signal": "NEUTRAL",
+        "price": 1.2369919307164108,
+        "confidence": 62.2,
+        "id": "20260313171851455628",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:18:44.403013",
+        "asset": "USDBDT",
+        "signal": "NEUTRAL",
+        "price": 1.2369919307164108,
+        "confidence": 62.2,
+        "id": "20260313171844403301",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:18:42.878264",
+        "asset": "USDBDT",
+        "signal": "NEUTRAL",
+        "price": 1.2369919307164108,
+        "confidence": 62.2,
+        "id": "20260313171842878483",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:16:48.860720",
+        "asset": "USDBDT",
+        "signal": "NEUTRAL",
+        "price": 1.2512052526885047,
+        "confidence": 62.2,
+        "id": "20260313171648860999",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:16:08.429207",
+        "asset": "USDBRL",
+        "signal": "NEUTRAL",
+        "price": 1.2507552663083263,
+        "confidence": 74.5,
+        "id": "20260313171608429498",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:15:59.474576",
+        "asset": "USDBRL",
+        "signal": "NEUTRAL",
+        "price": 1.251191763282436,
+        "confidence": 62.2,
+        "id": "20260313171559474835",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:15:42.008380",
+        "asset": "USDBRL",
+        "signal": "NEUTRAL",
+        "price": 1.2543484540374708,
+        "confidence": 67.2,
+        "id": "20260313171542008710",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:15:30.791880",
+        "asset": "USDBRL",
+        "signal": "NEUTRAL",
+        "price": 1.2554711997656665,
+        "confidence": 54.9,
+        "id": "20260313171530792329",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:15:07.877941",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.0867886069108226,
+        "confidence": 52.5,
+        "id": "20260313171507878214",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-13T17:14:52.935463",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.0867886069108226,
+        "confidence": 52.5,
+        "id": "20260313171452936072",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:45.932069",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110545932289",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:39.222274",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110539222508",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:37.389579",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110537389857",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:35.411558",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110535411891",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:24.334940",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110524335150",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:05:21.155960",
+        "asset": "EURUSD (OTC)",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110521156221",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T11:04:48.809270",
+        "asset": "EURUSD",
+        "signal": "NEUTRAL",
+        "price": 1.1547343730926514,
+        "confidence": 74.5,
+        "id": "20260312110448809483",
+        "outcome": null
+    },
+    {
+        "timestamp": "2026-03-12T00:36:10.501941",
+        "asset": "EURUSD (OTC)",
+        "signal": "UP",
+        "price": 1.1575413942337036,
+        "confidence": 74.5,
+        "id": "20260312003610502161",
+        "outcome": null
+    }
+]

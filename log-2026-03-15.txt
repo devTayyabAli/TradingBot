@@ -1,0 +1,112 @@
+2026-03-15 21:44:38.804 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 21:44:38.805 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 21:44:38.805 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 21:44:51.793 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 21:45:02.026 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 21:45:29.258 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:45:29.259 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:45:29.502 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 21:52:12.377 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 21:52:12.377 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 21:52:12.377 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 21:52:24.441 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 21:52:31.700 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 21:53:00.941 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:53:00.941 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:53:01.193 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 21:56:30.806 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 21:56:30.806 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 21:56:30.806 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 21:56:42.704 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 21:56:43.537 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 21:57:12.751 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:57:12.751 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 21:57:12.950 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 22:07:29.857 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 22:07:29.857 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 22:07:29.857 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 22:07:41.738 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 22:07:42.837 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 22:08:11.545 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 22:08:11.545 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 22:08:11.736 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 23:30:23.846 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 23:30:23.846 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 23:30:23.846 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 23:30:35.853 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 23:30:37.382 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 23:30:40.939 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 23:30:40.939 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 23:30:40.939 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 23:30:51.887 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 23:30:52.735 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 23:31:01.476 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:31:01.476 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:31:01.724 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 23:31:15.960 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:31:15.960 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:31:16.164 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 23:35:27.798 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 23:35:27.798 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 23:35:27.799 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 23:35:39.604 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 23:35:40.972 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 23:36:09.989 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:36:09.989 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:36:10.434 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-03-15 23:39:42.778 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-03-15 23:39:42.779 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-03-15 23:39:42.779 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-03-15 23:39:54.783 | WARNING  | api_quotex.login:get_ssid:381 - Cloudscraper path failed: HTTPSConnectionPool(host='qxbroker.com', port=443): Max retries exceeded with url: /en/sign-in/ (Caused by NameResolutionError("HTTPSConnection(host='qxbroker.com', port=443): Failed to resolve 'qxbroker.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 23:39:56.140 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-03-15 23:40:24.480 | ERROR    | api_quotex.login:_playwright_login_and_capture:217 - Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:40:24.480 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Playwright login failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://qxbroker.com/en/sign-in/
+Call log:
+  - navigating to "https://qxbroker.com/en/sign-in/", waiting until "domcontentloaded"
+
+2026-03-15 23:40:24.797 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.

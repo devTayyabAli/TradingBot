@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "sender_email": "tayyabarine@gmail.com",
+  "sender_password": "bqmq pnvt fiiu llww",
+  "recipient_email": "tayyabarine@gmail.com",
+  "min_confidence": 75,
+  "min_strength": [
+    "STRONG",
+    "MODERATE"
+  ],
+  "min_indicators": 10
+}
