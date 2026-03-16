@@ -42,7 +42,7 @@ class DataFetcher:
                 
             # Process data
             df = data[['Open', 'High', 'Low', 'Close', 'Volume']].copy()
-            df.columns = ['open', 'high', 'low', 'close', 'volume']
+            # Keep uppercase column names for compatibility with signal engine
             
             # Return last N candles
             return df.tail(count)
