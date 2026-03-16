@@ -17,3 +17,4 @@ loguru
 cloudscraper
 beautifulsoup4
 playwright
+openai

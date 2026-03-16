@@ -19,6 +19,7 @@ from trade_notifier import trade_notifier
 from email_notifier import email_notifier
 from signal_tracker import SignalTracker
 from models import SignalSettings, SignalResponse, SignalHistory
+from openai_enhancer import OpenAIEnhancer
 
 from contextlib import asynccontextmanager
 
@@ -49,6 +50,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Trading Signal Generator API", lifespan=lifespan)
+
+# Initialize AI enhancer
+ai_enhancer = OpenAIEnhancer()
 
 app.add_middleware(
     CORSMiddleware,
@@ -153,26 +157,30 @@ async def get_signal(asset: str = "EURUSD", timeframe: str = "1m"):
         engine = UltraConservativeSignalEngine(current_settings.model_dump())
         result = engine.calculate_signals(df)
         
+        # Enhance signal with AI analysis
+        enhanced_result = await ai_enhancer.enhance_signal(result, asset, timeframe)
+        
         # Check for high-quality trade and notify
-        notification = trade_notifier.notify(result, asset, timeframe)
+        notification = trade_notifier.notify(enhanced_result, asset, timeframe)
         
         # Send email notification for high-quality trades
         if notification:
-            email_notifier.send_email(result, asset, timeframe)
+            email_notifier.send_email(enhanced_result, asset, timeframe)
 
         response = SignalResponse(
             asset=asset,
             timeframe=timeframe,
             timestamp=datetime.now(),
-            **result
+            **enhanced_result
         )
 
         tracker.save_signal({
             "timestamp": datetime.now().isoformat(),
             "asset": asset,
-            "signal": result["signal"],
-            "price": result["price"],
-            "confidence": result["confidence"],
+            "signal": enhanced_result["signal"],
+            "price": enhanced_result["price"],
+            "confidence": enhanced_result["confidence"],
+            "ai_enhanced": enhanced_result.get("is_ai_enhanced", False)
         })
 
         return response
@@ -180,6 +188,17 @@ async def get_signal(asset: str = "EURUSD", timeframe: str = "1m"):
     except Exception as e:
         print(f"[Signal API] Error: {e}")
         raise HTTPException(status_code=500, detail=f"Signal generation failed: {str(e)}")
+
+
+@app.get("/api/sentiment/{asset}")
+async def get_market_sentiment(asset: str):
+    """Get AI-powered market sentiment for an asset"""
+    try:
+        sentiment = await ai_enhancer.get_market_sentiment(asset)
+        return sentiment
+    except Exception as e:
+        print(f"[Sentiment API] Error: {e}")
+        raise HTTPException(status_code=500, detail=f"Sentiment analysis failed: {str(e)}")
 
 
 @app.get("/api/accuracy")
