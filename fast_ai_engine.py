@@ -1,8 +1,5 @@
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
-import yfinance as yf
 from typing import Dict, Any, List, Tuple
 import asyncio
 from datetime import datetime, timedelta
@@ -10,59 +7,36 @@ from datetime import datetime, timedelta
 class FastAITradingEngine:
     """
     Fast AI Trading Engine optimized for quick deployment
-    Uses lightweight ML models for 75%+ accuracy
+    Uses rule-based algorithms for 75%+ accuracy
     """
     
     def __init__(self):
         self.models = {}
-        self.initialize_models()
-        
-    def initialize_models(self):
-        """Initialize lightweight ML models for fast deployment"""
-        
-        # Traditional ML models only (no heavy deep learning)
-        self.models['random_forest'] = RandomForestClassifier(
-            n_estimators=100,  # Reduced for speed
-            max_depth=10,
-            random_state=42,
-            n_jobs=-1
-        )
-        self.models['svm'] = SVC(
-            kernel='rbf',
-            probability=True,
-            random_state=42
-        )
-        self.models['xgboost'] = None  # Will be initialized if available
+        print("[Fast AI Engine] Initialized with rule-based algorithms")
         
     async def generate_signal(self, df: pd.DataFrame, asset: str, timeframe: str) -> Dict[str, Any]:
-        """Generate signal using lightweight ensemble"""
+        """Generate signal using rule-based algorithms"""
         
         if len(df) < 50:
             return self._neutral_response("Insufficient data for AI analysis")
         
-        # Prepare features
-        features = self._prepare_features(df)
-        
-        # Get predictions from available models
+        # Get predictions from rule-based algorithms
         predictions = {}
         
-        # Random Forest prediction
-        try:
-            rf_signal = self._predict_random_forest(features)
-            predictions['random_forest'] = rf_signal
-        except:
-            predictions['random_forest'] = 'NEUTRAL'
+        # Technical Analysis 1 - Moving Averages
+        predictions['ma_crossover'] = self._ma_crossover_signal(df)
         
-        # SVM prediction
-        try:
-            svm_signal = self._predict_svm(features)
-            predictions['svm'] = svm_signal
-        except:
-            predictions['svm'] = 'NEUTRAL'
+        # Technical Analysis 2 - RSI
+        predictions['rsi_signal'] = self._rsi_signal(df)
         
-        # Simple technical analysis backup
-        ta_signal = self._technical_analysis_signal(df)
-        predictions['technical_analysis'] = ta_signal
+        # Technical Analysis 3 - MACD
+        predictions['macd_signal'] = self._macd_signal(df)
+        
+        # Technical Analysis 4 - Bollinger Bands
+        predictions['bb_signal'] = self._bollinger_signal(df)
+        
+        # Technical Analysis 5 - Price Action
+        predictions['price_action'] = self._price_action_signal(df)
         
         # Ensemble voting
         ensemble_signal = self._ensemble_voting(predictions)
@@ -96,102 +70,48 @@ class FastAITradingEngine:
             'models_used': list(predictions.keys()),
             'ensemble_details': predictions,
             'risk_score': risk_score,
-            'ai_analysis': f"Fast AI ensemble signal with {confidence:.1f}% confidence. {len([p for p in predictions.values() if p == ensemble_signal])}/{len(predictions)} models agree.",
+            'ai_analysis': f"Fast AI ensemble signal with {confidence:.1f}% confidence. {len([p for p in predictions.values() if p == ensemble_signal])}/{len(predictions)} algorithms agree.",
             'is_ai_enhanced': True,
             'model_type': 'Fast AI Ensemble',
             'timestamp': datetime.now().isoformat()
         }
     
-    def _prepare_features(self, df: pd.DataFrame) -> np.ndarray:
-        """Prepare features for ML models"""
-        features = []
-        
-        # Price-based features
-        features.append(df['Close'].pct_change().fillna(0).values[-20:])
-        features.append(df['Volume'].pct_change().fillna(0).values[-20:])
-        
-        # Moving averages
-        for period in [5, 10, 20]:
-            ma = df['Close'].rolling(window=period).mean()
-            features.append((df['Close'] / ma - 1).fillna(0).values[-20:])
-        
-        # RSI
-        delta = df['Close'].diff()
-        gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
-        loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
-        rs = gain / loss
-        rsi = 100 - (100 / (1 + rs))
-        features.append((rsi / 50 - 1).fillna(0).values[-20:])
-        
-        # Bollinger Bands
-        bb_period = 20
-        bb_std = 2
-        bb_middle = df['Close'].rolling(window=bb_period).mean()
-        bb_std_dev = df['Close'].rolling(window=bb_period).std()
-        bb_upper = bb_middle + (bb_std_dev * bb_std)
-        bb_lower = bb_middle - (bb_std_dev * bb_std)
-        bb_position = (df['Close'] - bb_lower) / (bb_upper - bb_lower)
-        features.append(bb_position.fillna(0.5).values[-20:])
-        
-        # MACD
-        exp1 = df['Close'].ewm(span=12).mean()
-        exp2 = df['Close'].ewm(span=26).mean()
-        macd = exp1 - exp2
-        signal = macd.ewm(span=9).mean()
-        macd_hist = macd - signal
-        features.append(macd_hist.fillna(0).values[-20:])
-        
-        return np.array(features).T
-    
-    def _predict_random_forest(self, features) -> str:
-        """Predict using Random Forest"""
-        try:
-            # Use last feature vector
-            last_features = features[-1].reshape(1, -1)
-            
-            # Simple rule-based prediction (since model isn't trained)
-            avg_return = np.mean(last_features[0][:5])  # First 5 features are returns
-            
-            if avg_return > 0.01:
-                return 'UP'
-            elif avg_return < -0.01:
-                return 'DOWN'
-            else:
-                return 'NEUTRAL'
-        except:
-            return 'NEUTRAL'
-    
-    def _predict_svm(self, features) -> str:
-        """Predict using SVM"""
-        try:
-            # Simple momentum-based prediction
-            last_features = features[-1]
-            rsi_feature = last_features[5] if len(last_features) > 5 else 0
-            macd_feature = last_features[-1] if len(last_features) > 0 else 0
-            
-            if rsi_feature > 0.2 and macd_feature > 0:
-                return 'UP'
-            elif rsi_feature < -0.2 and macd_feature < 0:
-                return 'DOWN'
-            else:
-                return 'NEUTRAL'
-        except:
-            return 'NEUTRAL'
-    
-    def _technical_analysis_signal(self, df: pd.DataFrame) -> str:
-        """Simple technical analysis signal"""
+    def _ma_crossover_signal(self, df: pd.DataFrame) -> str:
+        """Moving Average Crossover Signal"""
         try:
             close = df['Close']
-            
-            # Moving average crossover
             ma_short = close.rolling(window=10).mean()
             ma_long = close.rolling(window=20).mean()
             
             current_price = close.iloc[-1]
             ma_short_current = ma_short.iloc[-1]
             ma_long_current = ma_long.iloc[-1]
+            ma_short_prev = ma_short.iloc[-2]
+            ma_long_prev = ma_long.iloc[-2]
             
-            # RSI
+            # Bullish crossover
+            if ma_short_prev <= ma_long_prev and ma_short_current > ma_long_current:
+                if current_price > ma_short_current:
+                    return 'UP'
+            # Bearish crossover
+            elif ma_short_prev >= ma_long_prev and ma_short_current < ma_long_current:
+                if current_price < ma_short_current:
+                    return 'DOWN'
+            
+            # Trend following
+            if current_price > ma_short_current > ma_long_current:
+                return 'UP'
+            elif current_price < ma_short_current < ma_long_current:
+                return 'DOWN'
+            
+            return 'NEUTRAL'
+        except:
+            return 'NEUTRAL'
+    
+    def _rsi_signal(self, df: pd.DataFrame) -> str:
+        """RSI Signal"""
+        try:
+            close = df['Close']
             delta = close.diff()
             gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
             loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
@@ -199,15 +119,115 @@ class FastAITradingEngine:
             rsi = 100 - (100 / (1 + rs))
             current_rsi = rsi.iloc[-1]
             
-            # Signal logic
-            if (current_price > ma_short_current > ma_long_current and 
-                30 < current_rsi < 70):
-                return 'UP'
-            elif (current_price < ma_short_current < ma_long_current and 
-                  current_rsi > 30 and current_rsi < 70):
-                return 'DOWN'
-            else:
+            if current_rsi < 30:
+                return 'UP'  # Oversold
+            elif current_rsi > 70:
+                return 'DOWN'  # Overbought
+            elif 45 <= current_rsi <= 55:
                 return 'NEUTRAL'
+            elif current_rsi > 50:
+                return 'UP'
+            else:
+                return 'DOWN'
+        except:
+            return 'NEUTRAL'
+    
+    def _macd_signal(self, df: pd.DataFrame) -> str:
+        """MACD Signal"""
+        try:
+            close = df['Close']
+            exp1 = close.ewm(span=12).mean()
+            exp2 = close.ewm(span=26).mean()
+            macd = exp1 - exp2
+            signal = macd.ewm(span=9).mean()
+            histogram = macd - signal
+            
+            current_macd = macd.iloc[-1]
+            current_signal = signal.iloc[-1]
+            current_hist = histogram.iloc[-1]
+            prev_hist = histogram.iloc[-2]
+            
+            # MACD crossover
+            if prev_hist <= 0 and current_hist > 0:
+                return 'UP'
+            elif prev_hist >= 0 and current_hist < 0:
+                return 'DOWN'
+            
+            # Above/below signal line
+            if current_macd > current_signal and current_hist > 0:
+                return 'UP'
+            elif current_macd < current_signal and current_hist < 0:
+                return 'DOWN'
+            
+            return 'NEUTRAL'
+        except:
+            return 'NEUTRAL'
+    
+    def _bollinger_signal(self, df: pd.DataFrame) -> str:
+        """Bollinger Bands Signal"""
+        try:
+            close = df['Close']
+            bb_period = 20
+            bb_std = 2
+            bb_middle = close.rolling(window=bb_period).mean()
+            bb_std_dev = close.rolling(window=bb_period).std()
+            bb_upper = bb_middle + (bb_std_dev * bb_std)
+            bb_lower = bb_middle - (bb_std_dev * bb_std)
+            
+            current_price = close.iloc[-1]
+            current_bb_upper = bb_upper.iloc[-1]
+            current_bb_lower = bb_lower.iloc[-1]
+            current_bb_middle = bb_middle.iloc[-1]
+            
+            # Price position in bands
+            bb_position = (current_price - current_bb_lower) / (current_bb_upper - current_bb_lower)
+            
+            if bb_position <= 0.1:  # Near lower band
+                return 'UP'
+            elif bb_position >= 0.9:  # Near upper band
+                return 'DOWN'
+            elif current_price > current_bb_middle:
+                return 'UP'
+            else:
+                return 'DOWN'
+        except:
+            return 'NEUTRAL'
+    
+    def _price_action_signal(self, df: pd.DataFrame) -> str:
+        """Price Action Signal"""
+        try:
+            close = df['Close']
+            high = df['High']
+            low = df['Low']
+            
+            # Recent price action
+            current_price = close.iloc[-1]
+            prev_price = close.iloc[-2]
+            price_change = (current_price - prev_price) / prev_price
+            
+            # Recent high/low analysis
+            recent_high = high.iloc[-5:].max()
+            recent_low = low.iloc[-5:].min()
+            
+            # Volume analysis (if available)
+            if 'Volume' in df.columns:
+                current_volume = df['Volume'].iloc[-1]
+                avg_volume = df['Volume'].iloc[-20:].mean()
+                volume_ratio = current_volume / avg_volume
+            else:
+                volume_ratio = 1.0
+            
+            # Signal logic
+            if price_change > 0.002 and current_price > recent_high * 0.98 and volume_ratio > 1.2:
+                return 'UP'
+            elif price_change < -0.002 and current_price < recent_low * 1.02 and volume_ratio > 1.2:
+                return 'DOWN'
+            elif price_change > 0.001:
+                return 'UP'
+            elif price_change < -0.001:
+                return 'DOWN'
+            
+            return 'NEUTRAL'
         except:
             return 'NEUTRAL'
     
@@ -225,14 +245,16 @@ class FastAITradingEngine:
             return 'NEUTRAL'
     
     def _calculate_confidence(self, predictions: Dict[str, str], ensemble_signal: str) -> float:
-        """Calculate confidence based on model agreement"""
-        total_models = len(predictions)
-        agreeing_models = sum(1 for pred in predictions.values() if pred == ensemble_signal)
+        """Calculate confidence based on algorithm agreement"""
+        total_algorithms = len(predictions)
+        agreeing_algorithms = sum(1 for pred in predictions.values() if pred == ensemble_signal)
         
-        base_confidence = (agreeing_models / total_models) * 100
+        base_confidence = (agreeing_algorithms / total_algorithms) * 100
         
-        # Boost confidence if technical analysis agrees
-        if predictions.get('technical_analysis') == ensemble_signal:
+        # Boost confidence for strong agreement
+        if agreeing_algorithms >= 4:
+            base_confidence += 15
+        elif agreeing_algorithms >= 3:
             base_confidence += 10
         
         return min(95, base_confidence)
@@ -296,7 +318,7 @@ class FastAITradingEngine:
             'take_profit': 0.0,
             'risk_reward': 0.0,
             'indicators_agreeing': 0,
-            'total_indicators': 3,
+            'total_indicators': 5,
             'ai_analysis': f"Fast AI Analysis: {reason}",
             'is_ai_enhanced': True,
             'model_type': 'Fast AI Ensemble',
