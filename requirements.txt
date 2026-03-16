@@ -18,3 +18,7 @@ cloudscraper
 beautifulsoup4
 playwright
 openai
+torch
+torchaudio
+transformers
+xgboost

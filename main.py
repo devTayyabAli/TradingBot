@@ -20,6 +20,7 @@ from email_notifier import email_notifier
 from signal_tracker import SignalTracker
 from models import SignalSettings, SignalResponse, SignalHistory
 from openai_enhancer import OpenAIEnhancer
+from advanced_ai_engine import AdvancedAITradingEngine
 
 from contextlib import asynccontextmanager
 
@@ -51,8 +52,9 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Trading Signal Generator API", lifespan=lifespan)
 
-# Initialize AI enhancer
+# Initialize AI enhancers
 ai_enhancer = OpenAIEnhancer()
+advanced_ai_engine = AdvancedAITradingEngine()
 
 app.add_middleware(
     CORSMiddleware,
@@ -157,30 +159,34 @@ async def get_signal(asset: str = "EURUSD", timeframe: str = "1m"):
         engine = UltraConservativeSignalEngine(current_settings.model_dump())
         result = engine.calculate_signals(df)
         
-        # Enhance signal with AI analysis
-        enhanced_result = await ai_enhancer.enhance_signal(result, asset, timeframe)
+        # Enhance with Advanced AI Ensemble (primary)
+        enhanced_result = await advanced_ai_engine.generate_signal(df, asset, timeframe)
+        
+        # Additional OpenAI enhancement
+        final_result = await ai_enhancer.enhance_signal(enhanced_result, asset, timeframe)
         
         # Check for high-quality trade and notify
-        notification = trade_notifier.notify(enhanced_result, asset, timeframe)
+        notification = trade_notifier.notify(final_result, asset, timeframe)
         
         # Send email notification for high-quality trades
         if notification:
-            email_notifier.send_email(enhanced_result, asset, timeframe)
+            email_notifier.send_email(final_result, asset, timeframe)
 
         response = SignalResponse(
             asset=asset,
             timeframe=timeframe,
             timestamp=datetime.now(),
-            **enhanced_result
+            **final_result
         )
 
         tracker.save_signal({
             "timestamp": datetime.now().isoformat(),
             "asset": asset,
-            "signal": enhanced_result["signal"],
-            "price": enhanced_result["price"],
-            "confidence": enhanced_result["confidence"],
-            "ai_enhanced": enhanced_result.get("is_ai_enhanced", False)
+            "signal": final_result["signal"],
+            "price": final_result["price"],
+            "confidence": final_result["confidence"],
+            "ai_enhanced": final_result.get("is_ai_enhanced", False),
+            "model_type": final_result.get("model_type", "Unknown")
         })
 
         return response
