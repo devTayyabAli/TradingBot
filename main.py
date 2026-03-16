@@ -279,21 +279,26 @@ async def test_email():
 
 @app.get("/api/chart")
 async def get_chart_data(asset: str = "EURUSD", timeframe: str = "1m"):
-    symbol, _ = _resolve(asset, timeframe)
-    df = await quotex_fetcher.fetch_data(symbol, timeframe=timeframe, count=200)
-    if df is None or df.empty:
-        raise HTTPException(status_code=404, detail=f"Chart data not found: {symbol}")
+    try:
+        symbol, _ = _resolve(asset, timeframe)
+        df = await quotex_fetcher.fetch_data(symbol, timeframe=timeframe, count=200)
+        if df is None or df.empty:
+            raise HTTPException(status_code=404, detail=f"Chart data not found: {symbol}")
 
-    chart_data = []
-    for ts, row in df.iterrows():
-        chart_data.append({
-            "time":  int(ts.timestamp()),
-            "open":  float(row["Open"]),
-            "high":  float(row["High"]),
-            "low":   float(row["Low"]),
-            "close": float(row["Close"]),
-        })
-    return chart_data
+        chart_data = []
+        for ts, row in df.iterrows():
+            chart_data.append({
+                "time":  int(ts.timestamp()),
+                "open":  float(row["Open"]),
+                "high":  float(row["High"]),
+                "low":   float(row["Low"]),
+                "close": float(row["Close"]),
+            })
+        return chart_data
+    
+    except Exception as e:
+        print(f"[Chart API] Error: {e}")
+        raise HTTPException(status_code=500, detail=f"Chart data generation failed: {str(e)}")
 
 
 @app.get("/api/assets")
