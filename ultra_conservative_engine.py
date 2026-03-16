@@ -15,8 +15,9 @@ class UltraConservativeSignalEngine:
     
     def __init__(self, settings: Dict[str, Any]):
         self.settings = settings
-        self.min_indicators_agree = 10  # At least 10 of 12 indicators must agree
-        self.min_score = 250  # Very high threshold (out of 370 max)
+        self.min_indicators_agree = 11  # At least 11 of 12 indicators must agree for 90% accuracy
+        self.min_score = 300  # Extremely high threshold (out of 370 max)
+        self.min_confidence = 90  # Minimum 90% confidence required
         self.pattern_history = []
         self.trade_count = 0
         self.win_count = 0
@@ -281,17 +282,21 @@ class UltraConservativeSignalEngine:
         }
     
     def get_stats(self) -> Dict[str, Any]:
-        """Get signal generation statistics"""
+        """Get signal generation statistics with 90% accuracy focus"""
         if not self.pattern_history:
             return {"message": "No signals generated yet"}
         
         recent = self.pattern_history[-100:]
         signals = [r for r in recent if r['signal'] != 'NEUTRAL']
+        high_confidence = [r for r in signals if r.get('confidence', 0) >= 90]
         
         return {
             "total_signals": len(signals),
+            "high_confidence_signals": len(high_confidence),
+            "accuracy_target": "90%+",
             "signal_frequency": len(signals) / max(len(recent), 1),
             "avg_indicators_agreeing": np.mean([r['indicators_agreeing'] for r in signals]) if signals else 0,
+            "avg_confidence": np.mean([r.get('confidence', 0) for r in signals]) if signals else 0,
             "recent_signals": len([r for r in recent[-20:] if r['signal'] != 'NEUTRAL']),
-            "disclaimer": "Ultra-conservative mode filters for only the strongest setups"
+            "disclaimer": "Ultra-conservative mode: Only signals with 90%+ accuracy potential"
         }

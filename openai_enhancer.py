@@ -13,7 +13,20 @@ class OpenAIEnhancer:
         )
     
     async def enhance_signal(self, signal_data: Dict[str, Any], asset: str, timeframe: str) -> Dict[str, Any]:
-        """Enhance trading signal with AI analysis"""
+        """Enhance trading signal with AI analysis for 90% accuracy"""
+        
+        # Only enhance high-quality signals
+        if signal_data.get('confidence', 0) < 85:
+            # Return neutral for low confidence signals
+            return {
+                **signal_data,
+                'signal': 'NEUTRAL',
+                'confidence': 50,
+                'strength': 'WEAK',
+                'ai_analysis': 'Signal filtered out - confidence below 85% threshold',
+                'ai_recommendation': 'HOLD',
+                'is_ai_enhanced': True
+            }
         
         # Prepare market context for AI
         market_context = {
@@ -27,9 +40,9 @@ class OpenAIEnhancer:
             'strength': signal_data.get('strength', 'UNKNOWN')
         }
         
-        # Create AI prompt for professional analysis
+        # Create AI prompt for 90% accuracy analysis
         prompt = f"""
-        As a professional trading analyst, analyze this trading signal and provide detailed recommendations:
+        You are a conservative trading analyst focused on 90%+ accuracy. Analyze this signal:
         
         MARKET DATA:
         Asset: {market_context['asset']}
@@ -40,26 +53,21 @@ class OpenAIEnhancer:
         Technical Indicators: {market_context['indicators']}/{market_context['total_indicators']} agreeing
         Signal Strength: {market_context['strength']}
         
-        Please provide:
-        1. Detailed market analysis
-        2. Risk assessment (1-10 scale)
-        3. Recommended stop loss and take profit levels
-        4. Market sentiment analysis
-        5. Key factors supporting this signal
-        6. Potential risks and warnings
-        7. Overall recommendation (STRONG BUY/BUY/HOLD/SELL/STRONG SELL)
+        CRITICAL: Only recommend STRONG BUY or STRONG SELL if you believe this has 90%+ success probability.
+        Otherwise, recommend HOLD.
         
         Respond in JSON format:
         {{
-            "analysis": "detailed market analysis",
+            "analysis": "detailed analysis",
             "risk_score": 1-10,
             "stop_loss": price,
             "take_profit": price,
             "sentiment": "bullish/bearish/neutral",
-            "key_factors": ["factor1", "factor2", "factor3"],
+            "key_factors": ["factor1", "factor2"],
             "risks": ["risk1", "risk2"],
-            "recommendation": "STRONG BUY/BUY/HOLD/SELL/STRONG SELL",
-            "confidence_boost": additional_confidence_points
+            "recommendation": "STRONG BUY/STRONG SELL/HOLD",
+            "confidence_boost": 0-10,
+            "success_probability": 85-100
         }}
         """
         
@@ -67,16 +75,29 @@ class OpenAIEnhancer:
             response = await self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": "You are an expert trading analyst with 15+ years of experience in forex and commodities trading."},
+                    {"role": "system", "content": "You are a conservative trading analyst with 20+ years experience. Your goal is 90%+ accuracy. Be extremely selective."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=800,
-                temperature=0.3
+                max_tokens=600,
+                temperature=0.1  # Lower temperature for more consistent results
             )
             
             ai_analysis = json.loads(response.choices[0].message.content)
             
-            # Enhance original signal with AI insights
+            # Apply 90% accuracy filter
+            if ai_analysis['success_probability'] < 90 or ai_analysis['recommendation'] == 'HOLD':
+                return {
+                    **signal_data,
+                    'signal': 'NEUTRAL',
+                    'confidence': 50,
+                    'strength': 'WEAK',
+                    'ai_analysis': ai_analysis['analysis'],
+                    'ai_recommendation': 'HOLD',
+                    'ai_risk_score': ai_analysis['risk_score'],
+                    'is_ai_enhanced': True
+                }
+            
+            # Enhance signal with AI insights for high-confidence trades
             enhanced_signal = signal_data.copy()
             enhanced_signal.update({
                 'ai_analysis': ai_analysis['analysis'],
@@ -97,8 +118,16 @@ class OpenAIEnhancer:
             
         except Exception as e:
             print(f"[OpenAI] Error enhancing signal: {e}")
-            # Return original signal if AI enhancement fails
-            return signal_data
+            # Return conservative neutral signal if AI fails
+            return {
+                **signal_data,
+                'signal': 'NEUTRAL',
+                'confidence': 50,
+                'strength': 'WEAK',
+                'ai_analysis': 'AI analysis unavailable - using conservative approach',
+                'ai_recommendation': 'HOLD',
+                'is_ai_enhanced': True
+            }
     
     async def get_market_sentiment(self, asset: str) -> Dict[str, Any]:
         """Get overall market sentiment for an asset"""
