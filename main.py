@@ -20,7 +20,7 @@ from email_notifier import email_notifier
 from signal_tracker import SignalTracker
 from models import SignalSettings, SignalResponse, SignalHistory
 from openai_enhancer import OpenAIEnhancer
-from advanced_ai_engine import AdvancedAITradingEngine
+from fast_ai_engine import FastAITradingEngine
 
 from contextlib import asynccontextmanager
 
@@ -54,7 +54,7 @@ app = FastAPI(title="Trading Signal Generator API", lifespan=lifespan)
 
 # Initialize AI enhancers
 ai_enhancer = OpenAIEnhancer()
-advanced_ai_engine = AdvancedAITradingEngine()
+fast_ai_engine = FastAITradingEngine()
 
 app.add_middleware(
     CORSMiddleware,
@@ -159,8 +159,8 @@ async def get_signal(asset: str = "EURUSD", timeframe: str = "1m"):
         engine = UltraConservativeSignalEngine(current_settings.model_dump())
         result = engine.calculate_signals(df)
         
-        # Enhance with Advanced AI Ensemble (primary)
-        enhanced_result = await advanced_ai_engine.generate_signal(df, asset, timeframe)
+        # Enhance with Fast AI Ensemble (primary)
+        enhanced_result = await fast_ai_engine.generate_signal(df, asset, timeframe)
         
         # Additional OpenAI enhancement
         final_result = await ai_enhancer.enhance_signal(enhanced_result, asset, timeframe)
