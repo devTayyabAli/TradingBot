@@ -13,17 +13,17 @@ class OpenAIEnhancer:
         )
     
     async def enhance_signal(self, signal_data: Dict[str, Any], asset: str, timeframe: str) -> Dict[str, Any]:
-        """Enhance trading signal with AI analysis for 90% accuracy"""
+        """Enhance trading signal with AI analysis for 75%+ accuracy"""
         
-        # Only enhance high-quality signals
-        if signal_data.get('confidence', 0) < 85:
-            # Return neutral for low confidence signals
+        # Only enhance reasonable quality signals
+        if signal_data.get('confidence', 0) < 60:
+            # Return neutral for very low confidence signals
             return {
                 **signal_data,
                 'signal': 'NEUTRAL',
                 'confidence': 50,
                 'strength': 'WEAK',
-                'ai_analysis': 'Signal filtered out - confidence below 85% threshold',
+                'ai_analysis': 'Signal filtered out - confidence below 60% threshold',
                 'ai_recommendation': 'HOLD',
                 'is_ai_enhanced': True
             }
@@ -40,9 +40,9 @@ class OpenAIEnhancer:
             'strength': signal_data.get('strength', 'UNKNOWN')
         }
         
-        # Create AI prompt for 90% accuracy analysis
+        # Create AI prompt for 75%+ accuracy analysis
         prompt = f"""
-        You are a conservative trading analyst focused on 90%+ accuracy. Analyze this signal:
+        You are a balanced trading analyst focused on 75%+ accuracy. Analyze this signal:
         
         MARKET DATA:
         Asset: {market_context['asset']}
@@ -53,8 +53,8 @@ class OpenAIEnhancer:
         Technical Indicators: {market_context['indicators']}/{market_context['total_indicators']} agreeing
         Signal Strength: {market_context['strength']}
         
-        CRITICAL: Only recommend STRONG BUY or STRONG SELL if you believe this has 90%+ success probability.
-        Otherwise, recommend HOLD.
+        BALANCED: Recommend BUY or SELL if you believe this has 75%+ success probability.
+        Only recommend HOLD for uncertain situations.
         
         Respond in JSON format:
         {{
@@ -65,9 +65,9 @@ class OpenAIEnhancer:
             "sentiment": "bullish/bearish/neutral",
             "key_factors": ["factor1", "factor2"],
             "risks": ["risk1", "risk2"],
-            "recommendation": "STRONG BUY/STRONG SELL/HOLD",
+            "recommendation": "BUY/SELL/HOLD",
             "confidence_boost": 0-10,
-            "success_probability": 85-100
+            "success_probability": 70-95
         }}
         """
         
@@ -75,7 +75,7 @@ class OpenAIEnhancer:
             response = await self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": "You are a conservative trading analyst with 20+ years experience. Your goal is 90%+ accuracy. Be extremely selective."},
+                    {"role": "system", "content": "You are a balanced trading analyst with 15+ years experience. Your goal is 75%+ accuracy. Be selective but not overly conservative."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=600,
@@ -84,8 +84,8 @@ class OpenAIEnhancer:
             
             ai_analysis = json.loads(response.choices[0].message.content)
             
-            # Apply 90% accuracy filter
-            if ai_analysis['success_probability'] < 90 or ai_analysis['recommendation'] == 'HOLD':
+            # Apply 75% accuracy filter
+            if ai_analysis['success_probability'] < 75 or ai_analysis['recommendation'] == 'HOLD':
                 return {
                     **signal_data,
                     'signal': 'NEUTRAL',

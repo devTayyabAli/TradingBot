@@ -15,9 +15,9 @@ class UltraConservativeSignalEngine:
     
     def __init__(self, settings: Dict[str, Any]):
         self.settings = settings
-        self.min_indicators_agree = 11  # At least 11 of 12 indicators must agree for 90% accuracy
-        self.min_score = 300  # Extremely high threshold (out of 370 max)
-        self.min_confidence = 90  # Minimum 90% confidence required
+        self.min_indicators_agree = 8  # Reduced to 8 of 12 indicators for more signals
+        self.min_score = 200  # Reduced threshold for more opportunities
+        self.min_confidence = 75  # Reduced to 75% minimum for more signals
         self.pattern_history = []
         self.trade_count = 0
         self.win_count = 0
@@ -293,10 +293,10 @@ class UltraConservativeSignalEngine:
         return {
             "total_signals": len(signals),
             "high_confidence_signals": len(high_confidence),
-            "accuracy_target": "90%+",
+            "accuracy_target": "75%+",
             "signal_frequency": len(signals) / max(len(recent), 1),
             "avg_indicators_agreeing": np.mean([r['indicators_agreeing'] for r in signals]) if signals else 0,
             "avg_confidence": np.mean([r.get('confidence', 0) for r in signals]) if signals else 0,
             "recent_signals": len([r for r in recent[-20:] if r['signal'] != 'NEUTRAL']),
-            "disclaimer": "Ultra-conservative mode: Only signals with 90%+ accuracy potential"
+            "disclaimer": "Balanced mode: Quality signals with good frequency"
         }

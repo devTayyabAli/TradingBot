@@ -293,9 +293,9 @@ class AdvancedAITradingEngine:
         # Calculate confidence based on agreement
         confidence = self._calculate_confidence(predictions, ensemble_signal)
         
-        # Apply 90% accuracy filter
-        if confidence < 90:
-            return self._neutral_response(f"Confidence {confidence:.1f}% below 90% threshold")
+        # Apply 75% accuracy filter
+        if confidence < 75:
+            return self._neutral_response(f"Confidence {confidence:.1f}% below 75% threshold")
         
         # Get current price
         current_price = df['Close'].iloc[-1]
