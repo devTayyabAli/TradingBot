@@ -5,6 +5,9 @@ builder = "NIXPACKS"
 startCommand = "python main.py"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+healthcheckPath = "/api/accuracy"
+healthcheckTimeout = 100
 
 [env]
 PYTHON_VERSION = "3.11"
+PORT = "8080"
