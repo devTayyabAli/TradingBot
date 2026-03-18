@@ -72,7 +72,8 @@ class FastAITradingEngine:
             'risk_score': risk_score,
             'ai_analysis': f"Fast AI ensemble signal with {confidence:.1f}% confidence. {len([p for p in predictions.values() if p == ensemble_signal])}/{len(predictions)} algorithms agree.",
             'is_ai_enhanced': True,
-            'model_type': 'Fast AI Ensemble'
+            'model_type': 'Fast AI Ensemble',
+            'timestamp': datetime.now().isoformat()
         }
     
     def _ma_crossover_signal(self, df: pd.DataFrame) -> str:
@@ -212,7 +213,11 @@ class FastAITradingEngine:
             if 'Volume' in df.columns:
                 current_volume = df['Volume'].iloc[-1]
                 avg_volume = df['Volume'].iloc[-20:].mean()
-                volume_ratio = current_volume / avg_volume if avg_volume > 0 else 1.0
+                # Fix division by zero
+                if avg_volume and avg_volume > 0:
+                    volume_ratio = current_volume / avg_volume
+                else:
+                    volume_ratio = 1.0
             else:
                 volume_ratio = 1.0
             
@@ -320,5 +325,6 @@ class FastAITradingEngine:
             'total_indicators': 5,
             'ai_analysis': f"Fast AI Analysis: {reason}",
             'is_ai_enhanced': True,
-            'model_type': 'Fast AI Ensemble'
+            'model_type': 'Fast AI Ensemble',
+            'timestamp': datetime.now().isoformat()
         }

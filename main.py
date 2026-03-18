@@ -172,6 +172,10 @@ async def get_signal(asset: str = "EURUSD", timeframe: str = "1m"):
         if notification:
             email_notifier.send_email(final_result, asset, timeframe)
 
+        # Remove timestamp from final_result if present to avoid conflict
+        if 'timestamp' in final_result:
+            del final_result['timestamp']
+        
         response = SignalResponse(
             asset=asset,
             timeframe=timeframe,
