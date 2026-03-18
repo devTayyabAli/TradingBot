@@ -64,7 +64,7 @@ class FastAITradingEngine:
             'price': current_price,
             'stop_loss': stop_loss,
             'take_profit': take_profit,
-            'risk_reward': abs((take_profit - current_price) / (stop_loss - current_price)),
+            'risk_reward': abs((take_profit - current_price) / (stop_loss - current_price)) if stop_loss != current_price else 0,
             'indicators_agreeing': sum(1 for pred in predictions.values() if pred == ensemble_signal),
             'total_indicators': len(predictions),
             'models_used': list(predictions.keys()),
@@ -73,7 +73,12 @@ class FastAITradingEngine:
             'ai_analysis': f"Fast AI ensemble signal with {confidence:.1f}% confidence. {len([p for p in predictions.values() if p == ensemble_signal])}/{len(predictions)} algorithms agree.",
             'is_ai_enhanced': True,
             'model_type': 'Fast AI Ensemble',
-            'timestamp': datetime.now().isoformat()
+            'indicators': {
+                'agreeing': sum(1 for pred in predictions.values() if pred == ensemble_signal),
+                'total': len(predictions),
+                'algorithms': list(predictions.keys()),
+                'predictions': predictions
+            }
         }
     
     def _ma_crossover_signal(self, df: pd.DataFrame) -> str:
@@ -326,5 +331,10 @@ class FastAITradingEngine:
             'ai_analysis': f"Fast AI Analysis: {reason}",
             'is_ai_enhanced': True,
             'model_type': 'Fast AI Ensemble',
-            'timestamp': datetime.now().isoformat()
+            'indicators': {
+                'agreeing': 0,
+                'total': 5,
+                'algorithms': [],
+                'predictions': {}
+            }
         }
